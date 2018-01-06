@@ -10,9 +10,12 @@ import coding.challenge.graph.BiDirectionalGraph;
 import coding.challenge.graph.Node;
 import coding.challenge.graph.path.Path;
 
-public class GrapheUtils {
+public class GraphUtils {
 
-
+	private GraphUtils() {
+		// This class is utility, the constructor should never be used
+	}
+	
 	public static Optional<Path> getFastestRoute(BiDirectionalGraph parentGraph) {
 		Optional<Path> shortestFromAnywhere = Optional.empty();
 		for(Node start : parentGraph.getNodeList()) {

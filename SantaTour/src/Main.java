@@ -1,6 +1,6 @@
 import coding.challenge.graph.BiDirectionalGraph;
 import coding.challenge.graph.Node;
-import coding.challenge.graph.utils.GrapheUtils;
+import coding.challenge.graph.utils.GraphUtils;
 
 public class Main {
 
@@ -49,7 +49,7 @@ public class Main {
 		
 		test.addRelationshipAtoB(tristram, arbre, 90);
 		
-		System.out.println(GrapheUtils.getFastestRoute(test).isPresent() ? GrapheUtils.getFastestRoute(test).get() : "woops");
+		System.out.println(GraphUtils.getFastestRoute(test).isPresent() ? GraphUtils.getFastestRoute(test).get() : "woops");
 		
 	}
 

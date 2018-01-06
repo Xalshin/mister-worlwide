@@ -3,6 +3,14 @@ package coding.challenge.graph;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 
+ * @author mahea
+ * A Simple node of our graph.
+ * It has a name (the name of the location it represents here) and a map of node representing its direct descendants, and the weight of their relationship
+ * (here, the travel time between that location and the other one).
+ *
+ */
 public class Node {
 	private  String name;
 	private Map<Node, Integer> outNodes;
@@ -36,7 +44,11 @@ public class Node {
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
-
+	/**
+	 * The nodes are identified by their names here.
+	 * Luckily, in our test, no different cities can have the same name.
+	 * In reality, we should have to identify them with an unique property.
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
